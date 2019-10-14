@@ -1,0 +1,104 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+        <form class="am-form form-validation view-save" action="{{:MyUrl('admin/supplierstore/save')}}" method="POST" request-type="ajax-url" request-value="{{:MyUrl('admin/supplierstore/index')}}">
+            <legend>
+				<span class="fs-16">
+					{{if empty($data['id'])}}
+						店铺添加
+					{{else /}}
+						店铺编辑
+					{{/if}}
+				</span>
+                <a href="{{:MyUrl('admin/admin/index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+            </legend>
+            <div class="am-form-group">
+                <label>店铺名</label>
+                <input type="text" placeholder="店铺名" name="name"  class="am-radius" {{if !empty($data)}}value="{{$data.name}}" {{/if}} required />
+            </div>
+            <div class="am-form-group">
+                <label>店铺简介<span class="am-form-group-label-tips">一般不超过200个字符</span></label>
+                <textarea rows="4" name="description" maxlength="230" class="am-radius" placeholder="店铺简介" data-validation-message="店铺简介格式 最多230个字符">{{if !empty($data)}}{{$data.description}} {{/if}}</textarea>
+            </div>
+            <div class="am-form-group">
+                <label>店铺地址</label><a href="#" onclick="getlocations()" class="am-btn am-btn-secondary am-radius am-btn-xs" style="float: right;margin-top: 23px;">获取经纬度</a>
+                <input type="text" placeholder="店铺地址" name="adds" id="adds" class="am-radius" style="width: 80%" {{if !empty($data)}}value="{{$data.adds}}" {{/if}} required />
+
+
+
+            </div>
+            <div class="am-form-group">
+                <label>经纬度</label>
+                <input type="text" placeholder="经纬度" name="location" id="location" class="am-radius" {{if !empty($data)}}value="{{$data.location}}" {{/if}} required
+
+            </div>
+
+            <div class="am-form-group">
+                <label>地图</label>
+                <div id="test" style="height: 400px;"></div>
+            </div>
+
+            <div class="am-form-group am-form-group-refreshing">
+                <input type="hidden" name="id" {{if !empty($data['id'])}}value="{{$data.id}}"{{/if}} />
+                <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- right content end  -->
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=UNBBZ-MJ5R6-5FSST-E6JQI-D5KV2-AMB7D"></script>
+<script type="text/javascript">
+    function getlocations(){
+        var adds = $('#adds').val();//店铺地址
+        console.log(adds)
+        geo.getLocation(adds);
+    }
+    var geo = new qq.maps.Geocoder()
+    console.log(geo)
+    var adds = $('#adds').val();//店铺地址
+
+    geo.getLocation(adds)//地址
+    geo.setComplete(function(res){
+        // console.log(res.detail.location['lat'])//得到经纬度
+        var location = res.detail.location['lat'] + ',' + res.detail.location['lng'];//当前经纬度
+        $('#adds').val(res.detail.address);
+        $('#location').val(location);
+        var map = new qq.maps.Map(document.getElementById('test'),{
+            center: res.detail.location,//将经纬度加到center属性上
+            zoom: 16,//缩放
+            draggable: true,//是否可拖拽
+            scrollwheel: true,//是否可滚动缩放
+            disableDoubleClickZoom: false
+        })
+        var marker = new qq.maps.Marker({
+            position: res.detail.location,//标记的经纬度
+            animation: qq.maps.MarkerAnimation.BOUNCE,//标记的动画
+            map: map//标记的地图
+        })
+
+        var citylocation = new qq.maps.CityService({
+            //设置地图
+            map : map,
+
+            complete : function(results){
+                console.log(9999,results)
+            }
+        });
+
+    })
+    // console.log(returnCitySN)
+</script>
+
+
+<script type="text/javascript">
+    // console.log(returnCitySN,returnCitySN["cip"]+','+returnCitySN["cname"])//获取ip可进行ip定位
+</script>

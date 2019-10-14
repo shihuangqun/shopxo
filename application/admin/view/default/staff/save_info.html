@@ -1,0 +1,47 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+        <form class="am-form form-validation view-save" action="{{:MyUrl('admin/staff/save')}}" method="POST" request-type="ajax-url" request-value="{{:MyUrl('admin/staff/index')}}">
+            <legend>
+				<span class="fs-16">
+					{{if empty($data['id'])}}
+						员工添加
+					{{else /}}
+						员工编辑
+					{{/if}}
+				</span>
+                <a href="{{:MyUrl('admin/staff/index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+            </legend>
+            <div class="am-form-group">
+                <label>员工姓名</label>
+                <input type="text" placeholder="员工姓名" name="name"  class="am-radius" {{if !empty($data)}}value="{{$data.name}}" {{/if}} required />
+            </div>
+            <div class="am-form-group">
+                <label>用户名</label>
+                <input type="text" placeholder="用户名" name="username"  class="am-radius" {{if !empty($data)}}value="{{$data.username}}" {{/if}} required />
+            </div>
+            <div class="am-form-group">
+                <label>登录密码</label>
+                <input type="password" placeholder="登录密码" name="password"  class="am-radius"  {{if !empty($data)}}value="" {{/if}} required />
+            </div>
+            <div class="am-form-group">
+                <label>手机号</label>
+                <input type="text" placeholder="手机号" name="phone"  class="am-radius"  {{if !empty($data)}}value="{{$data.phone}}" {{/if}} required />
+            </div>
+
+            <div class="am-form-group am-form-group-refreshing">
+                <input type="hidden" name="id" {{if !empty($data['id'])}}value="{{$data.id}}"{{/if}} />
+                <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- right content end  -->
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+

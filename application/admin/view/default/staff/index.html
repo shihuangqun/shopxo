@@ -1,0 +1,101 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+
+        <!-- form end -->
+
+
+        <!-- operation start -->
+        <div class="am-g m-t-15">
+            {{if condition="session('admin')['role_id'] eq 14 || $data eq null"}}
+            <a href="{{:MyUrl('admin/staff/saveinfo')}}" class="am-btn am-btn-secondary am-radius am-btn-xs am-icon-plus"> 新增</a>
+            {{/if}}
+
+        </div>
+        <!-- operation end -->
+
+        <!-- list start -->
+        <table class="am-table am-table-striped am-table-hover am-text-middle m-t-10">
+            <thead>
+            <tr>
+                <td><input type="checkbox" id="all" onclick="swapCheck()"></td>
+                {{if condition="session('admin')['role_id'] neq 14 || $data eq null"}}
+                <th>所属店铺</th>
+                {{/if}}
+                <th>员工姓名</th>
+                <th>用户名</th>
+                <th>手机号</th>
+                <th>添加时间</th>
+                {{if condition="session('admin')['role_id'] eq 14 || $data eq null"}}
+                <th>操作</th>
+                {{/if}}
+            </tr>
+            </thead>
+            <tbody>
+            {{if !empty($data)}}
+            {{foreach $data as $v}}
+            <tr id="data-list-{{$v.id}}">
+                <td><input type="checkbox" name="check" value="{{$v.id}}"></td>
+                {{if condition="session('admin')['role_id'] neq 14 || $data eq null"}}
+                <td>{{$v.store_name}}</td>
+                {{/if}}
+                <td>{{$v.name}}</td>
+                <td>{{$v.username}}</td>
+                <td>{{$v.phone}}</td>
+                <td class="am-hide-sm-only">{{:date('Y-m-d H:i:s', $v['createtime'])}}</td>
+                {{if condition="session('admin')['role_id'] eq 14 || $data eq null"}}
+                <td>
+
+                    <a href="{{:MyUrl('admin/staff/saveinfo', array('id'=>$v['id']))}}">
+                        <button class="am-btn am-btn-secondary am-btn-xs am-radius am-icon-edit" > 编辑</button>
+                    </a>
+
+
+                    <button class="am-btn am-btn-danger am-btn-xs am-radius am-icon-trash-o submit-delete" data-url="{{:MyUrl('admin/staff/delete')}}" data-id="{{$v.id}}"> 删除</button>
+
+
+                </td>
+                {{/if}}
+            </tr>
+            {{/foreach}}
+            {{/if}}
+            </tbody>
+        </table>
+        {{if empty($data)}}
+        <div class="table-no"><i class="am-icon-warning"></i> 没有相关数据</div>
+        {{/if}}
+        <!-- list end -->
+
+        <!-- page start -->
+        {{if !empty($data)}}
+
+        {{/if}}
+        <!-- page end -->
+    </div>
+</div>
+<!-- right content end  -->
+
+{{include file="public/footer" /}}
+<script>
+    var isCheckAll = false;
+
+    function swapCheck() {
+        if (isCheckAll) {
+            $("input[type='checkbox']").each(function() {
+                this.checked = false;
+            });
+            isCheckAll = false;
+        } else {
+            $("input[type='checkbox']").each(function() {
+                this.checked = true;
+            });
+            isCheckAll = true;
+        }
+    }
+
+
+
+</script>

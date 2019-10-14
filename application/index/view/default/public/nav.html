@@ -1,0 +1,26 @@
+<div class="mobile-navigation">
+    <li {{if $controller_name.$action_name eq 'indexindex'}}class="active"{{/if}}>
+        <a href="{{$Think.__MY_URL__}}" class="am-block">
+            <img src="{{$attachment_host}}/static/{{$module_name}}/{{$default_theme}}/images/{{if $controller_name.$action_name eq 'indexindex'}}nav-icon-home-active.png{{else /}}nav-icon-home.png{{/if}}" class="am-block" alt="首页" />
+            <p>首页</p>
+        </a>
+    </li>
+    <li {{if $controller_name.$action_name eq 'categoryindex'}}class="active"{{/if}}>
+        <a href="{{:MyUrl('index/category/index')}}" class="am-block">
+            <img src="{{$attachment_host}}/static/{{$module_name}}/{{$default_theme}}/images/{{if $controller_name.$action_name eq 'categoryindex'}}nav-icon-category-active.png{{else /}}nav-icon-category.png{{/if}}" class="am-block" alt="分类" />
+            <p>分类</p>
+        </a>
+    </li>
+    <li {{if $controller_name.$action_name eq 'cartindex'}}class="active"{{/if}}>
+        <a {{if empty($user)}}href="javascript:;" class="login-event am-block"{{else /}} href="{{:MyUrl('index/cart/index')}}" class="am-block"{{/if}}>
+            <img src="{{$attachment_host}}/static/{{$module_name}}/{{$default_theme}}/images/{{if $controller_name.$action_name eq 'cartindex'}}nav-icon-cart-active.png{{else /}}nav-icon-cart.png{{/if}}" class="am-block" alt="购物车" />
+            <p>购物车</p>
+        </a>
+    </li>
+    <li {{if $controller_name.$action_name eq 'userindex'}}class="active"{{/if}}>
+        <a {{if empty($user)}}href="javascript:;" class="login-event am-block"{{else /}} href="{{:MyUrl('index/user/index')}}" class="am-block"{{/if}}>
+            <img src="{{$attachment_host}}/static/{{$module_name}}/{{$default_theme}}/images/{{if $controller_name.$action_name eq 'userindex'}}nav-icon-user-active.png{{else /}}nav-icon-user.png{{/if}}" class="am-block" alt="我的" />
+            <p>我的</p>
+        </a>
+    </li>
+</div>

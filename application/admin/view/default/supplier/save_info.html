@@ -1,0 +1,37 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+        <form class="am-form form-validation view-save" action="{{:MyUrl('admin/supplier/save')}}" method="POST" request-type="ajax-url" request-value="{{:MyUrl('admin/supplier/index')}}">
+            <legend>
+				<span class="fs-16">
+					{{if empty($data['id'])}}
+						管理员添加
+					{{else /}}
+						管理员编辑
+					{{/if}}
+				</span>
+                <a href="{{:MyUrl('admin/admin/index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+            </legend>
+            <div class="am-form-group">
+                <label>供应商电话</label>
+                <input type="text" placeholder="供应商电话" name="phone" pattern="{{:lang('common_regex_username')}}" data-validation-message="必须是11位数字" class="am-radius" {{if !empty($data)}}value="{{$data.phone}}" {{/if}} required />
+            </div>
+
+
+
+            <div class="am-form-group am-form-group-refreshing">
+                <input type="hidden" name="id" {{if !empty($data['id'])}}value="{{$data.id}}"{{/if}} />
+                <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- right content end  -->
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

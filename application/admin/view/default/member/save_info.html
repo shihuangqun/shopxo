@@ -1,0 +1,39 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+        <form class="am-form form-validation view-save" action="{{:MyUrl('admin/member/save')}}" method="POST" request-type="ajax-url" request-value="{{:MyUrl('admin/member/index')}}">
+            <legend>
+				<span class="fs-16">
+					{{if empty($data['id'])}}
+						会员等级添加
+					{{else /}}
+						会员等级编辑
+					{{/if}}
+				</span>
+                <a href="{{:MyUrl('admin/admin/index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+            </legend>
+            <div class="am-form-group">
+                <label>会员等级</label>
+                <input type="text" placeholder="会员等级" name="level"  class="am-radius" {{if !empty($data)}}value="{{$data.level}}" {{/if}} required />
+            </div>
+            <div class="am-form-group">
+                <label>折扣</label>
+                <input type="text" placeholder="折扣百分比" name="discount"  class="am-radius" style="width: 20%;" {{if !empty($data)}}value="{{$data.discount}}" {{/if}} required />
+            </div>
+
+            <div class="am-form-group am-form-group-refreshing">
+                <input type="hidden" name="id" {{if !empty($data['id'])}}value="{{$data.id}}"{{/if}} />
+                <button type="submit" class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block" data-am-loading="{loadingText:'处理中...'}">保存</button>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- right content end  -->
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+

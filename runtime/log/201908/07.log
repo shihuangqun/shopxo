@@ -1,0 +1,674 @@
+---------------------------------------------------------------
+[ 2019-08-07T01:44:34+08:00 ] 3.112.36.38 GET 47.107.54.219/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000416s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_slide` [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT `name`,`images_url`,`event_value`,`event_type`,`bg_color` FROM `s_slide` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000112s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`images_url`,`event_value`,`event_type`,`bg_color`,`is_need_login` FROM `s_app_home_nav` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000112s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 1  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000100s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 2  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000116s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (304,305,306,307,308,309,310,311,188,189,190,191,192)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (1)  AND `is_enable` = 1 [ RunTime:0.000116s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_enable` = 1 [ RunTime:0.000116s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,90,91,92,93,94,95,96,97,98,99,100,101)  AND `is_enable` = 1 [ RunTime:0.000149s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('58','59','60','61','62','63','64','65','66','67','102','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','90','91','92','93','94','95','96','97','98','99','100','101')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (2)  AND `is_enable` = 1 [ RunTime:0.000089s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (188,189,190,191,192,304,305,306,307,308,309,310,311)  AND `is_enable` = 1 [ RunTime:0.000103s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451)  AND `is_enable` = 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('188','189','190','191','192','304','305','306','307','308','309','310','311','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356','357','358','359','360','361','362','363','364','365','366','367','368','369','370','371','372','373','374','375','376','377','378','379','380','381','382','383','384','385','386','387','388','389','390','391','392','393','394','395','396','397','398','399','400','401','402','403','404','405','406','407','408','409','410','411','412','413','414','415','416','417','418','419','420','421','422','423','424','425','426','427','428','429','430','431','432','433','434','435','436','437','438','439','440','441','442','443','444','445','446','447','448','449','450','451')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,ac.name AS category_name FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`is_home_recommended` = '1' ORDER BY `a`.`id` DESC LIMIT 0,9 [ RunTime:0.000086s ]
+---------------------------------------------------------------
+[ 2019-08-07T04:01:44+08:00 ] 47.101.198.15 GET s.justwaityou1314.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000101s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_slide` [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `name`,`images_url`,`event_value`,`event_type`,`bg_color` FROM `s_slide` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`images_url`,`event_value`,`event_type`,`bg_color`,`is_need_login` FROM `s_app_home_nav` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000175s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000130s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 1  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 2  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000144s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (304,305,306,307,308,309,310,311,188,189,190,191,192)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (1)  AND `is_enable` = 1 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_enable` = 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,90,91,92,93,94,95,96,97,98,99,100,101)  AND `is_enable` = 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('58','59','60','61','62','63','64','65','66','67','102','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','90','91','92','93','94','95','96','97','98','99','100','101')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (2)  AND `is_enable` = 1 [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (188,189,190,191,192,304,305,306,307,308,309,310,311)  AND `is_enable` = 1 [ RunTime:0.000111s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451)  AND `is_enable` = 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('188','189','190','191','192','304','305','306','307','308','309','310','311','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356','357','358','359','360','361','362','363','364','365','366','367','368','369','370','371','372','373','374','375','376','377','378','379','380','381','382','383','384','385','386','387','388','389','390','391','392','393','394','395','396','397','398','399','400','401','402','403','404','405','406','407','408','409','410','411','412','413','414','415','416','417','418','419','420','421','422','423','424','425','426','427','428','429','430','431','432','433','434','435','436','437','438','439','440','441','442','443','444','445','446','447','448','449','450','451')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,ac.name AS category_name FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`is_home_recommended` = '1' ORDER BY `a`.`id` DESC LIMIT 0,9 [ RunTime:0.000101s ]
+---------------------------------------------------------------
+[ 2019-08-07T04:01:45+08:00 ] 47.101.198.15 GET s.justwaityou1314.com/index.php?s=/index/article/index/id/1.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000360s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000124s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '1' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 1 [ RunTime:0.005303s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000102s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 10  AND `is_enable` = 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000197s ]
+---------------------------------------------------------------
+[ 2019-08-07T04:01:45+08:00 ] 47.101.198.15 GET s.justwaityou1314.com/index.php?s=/index/article/index/id/14.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000283s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '14' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.001547s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.000050s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 14 [ RunTime:0.009341s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000134s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 10  AND `is_enable` = 1 [ RunTime:0.000176s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000150s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000169s ]
+---------------------------------------------------------------
+[ 2019-08-07T04:01:45+08:00 ] 47.101.198.15 GET s.justwaityou1314.com/index.php?s=/index/article/index/id/13.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000317s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '13' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.000119s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 13 [ RunTime:0.016728s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000085s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 10  AND `is_enable` = 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000159s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000210s ]
+---------------------------------------------------------------
+[ 2019-08-07T04:01:45+08:00 ] 47.101.198.15 GET s.justwaityou1314.com/index.php?s=/index/article/index/id/12.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000410s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.001416s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000153s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.001331s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '12' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.000067s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 12 [ RunTime:0.035929s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000133s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 10  AND `is_enable` = 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000201s ]
+---------------------------------------------------------------
+[ 2019-08-07T04:01:45+08:00 ] 47.101.198.15 GET s.justwaityou1314.com/index.php?s=/index/article/index/id/15.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000354s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '15' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.000058s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 15 [ RunTime:0.005400s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 10  AND `is_enable` = 1 [ RunTime:0.000171s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000154s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000148s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:29:12+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000416s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000124s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_slide` [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `name`,`images_url`,`event_value`,`event_type`,`bg_color` FROM `s_slide` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000090s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`images_url`,`event_value`,`event_type`,`bg_color`,`is_need_login` FROM `s_app_home_nav` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000095s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000083s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 1  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000081s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 2  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000100s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (304,305,306,307,308,309,310,311,188,189,190,191,192)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (1)  AND `is_enable` = 1 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_enable` = 1 [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,90,91,92,93,94,95,96,97,98,99,100,101)  AND `is_enable` = 1 [ RunTime:0.000158s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('58','59','60','61','62','63','64','65','66','67','102','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','90','91','92','93','94','95','96','97','98','99','100','101')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (2)  AND `is_enable` = 1 [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (188,189,190,191,192,304,305,306,307,308,309,310,311)  AND `is_enable` = 1 [ RunTime:0.000115s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451)  AND `is_enable` = 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('188','189','190','191','192','304','305','306','307','308','309','310','311','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356','357','358','359','360','361','362','363','364','365','366','367','368','369','370','371','372','373','374','375','376','377','378','379','380','381','382','383','384','385','386','387','388','389','390','391','392','393','394','395','396','397','398','399','400','401','402','403','404','405','406','407','408','409','410','411','412','413','414','415','416','417','418','419','420','421','422','423','424','425','426','427','428','429','430','431','432','433','434','435','436','437','438','439','440','441','442','443','444','445','446','447','448','449','450','451')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,ac.name AS category_name FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`is_home_recommended` = '1' ORDER BY `a`.`id` DESC LIMIT 0,9 [ RunTime:0.000484s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:29:23+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000408s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000107s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_slide` [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT `name`,`images_url`,`event_value`,`event_type`,`bg_color` FROM `s_slide` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000081s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`images_url`,`event_value`,`event_type`,`bg_color`,`is_need_login` FROM `s_app_home_nav` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000117s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 1  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 2  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (304,305,306,307,308,309,310,311,188,189,190,191,192)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (1)  AND `is_enable` = 1 [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (58,59,60,61,62,63,64,65,66,67,102)  AND `is_enable` = 1 [ RunTime:0.000108s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,90,91,92,93,94,95,96,97,98,99,100,101)  AND `is_enable` = 1 [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('58','59','60','61','62','63','64','65','66','67','102','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','90','91','92','93','94','95','96','97','98','99','100','101')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (2)  AND `is_enable` = 1 [ RunTime:0.000126s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (188,189,190,191,192,304,305,306,307,308,309,310,311)  AND `is_enable` = 1 [ RunTime:0.000124s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451)  AND `is_enable` = 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`title`,`g`.`title_color`,`g`.`images`,`g`.`home_recommended_images`,`g`.`original_price`,`g`.`price`,`g`.`min_price`,`g`.`max_price`,`g`.`inventory`,`g`.`buy_min_number`,`g`.`buy_max_number` FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('188','189','190','191','192','304','305','306','307','308','309','310','311','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356','357','358','359','360','361','362','363','364','365','366','367','368','369','370','371','372','373','374','375','376','377','378','379','380','381','382','383','384','385','386','387','388','389','390','391','392','393','394','395','396','397','398','399','400','401','402','403','404','405','406','407','408','409','410','411','412','413','414','415','416','417','418','419','420','421','422','423','424','425','426','427','428','429','430','431','432','433','434','435','436','437','438','439','440','441','442','443','444','445','446','447','448','449','450','451')  AND `is_home_recommended` = 1 GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,ac.name AS category_name FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`is_home_recommended` = '1' ORDER BY `a`.`id` DESC LIMIT 0,9 [ RunTime:0.000082s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:29:30+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/index/init.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000414s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SELECT VERSION() AS `ver` [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_user` [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` LIMIT 1 [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` WHERE  `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` WHERE  `add_time` >= 1565107200  AND `add_time` <= 1565141370 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_order` [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4 LIMIT 1 [ RunTime:0.000093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565141370 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4 LIMIT 1 [ RunTime:0.000075s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000091s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565141370 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4 LIMIT 1 [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000142s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565141370 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000159s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000122s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000122s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000056s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000057s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000054s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000073s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000079s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000069s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000065s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000085s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000063s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000071s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000063s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000114s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000100s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000083s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000065s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_pay_log` [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT `payment_name` FROM `s_pay_log` WHERE  `business_type` = 1 GROUP BY `payment_name` [ RunTime:0.000125s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1564502400  AND `add_time` <= 1565141370 [ RunTime:0.000260s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:33:10+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/config/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000663s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000175s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:33:11+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/config/store.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000558s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000164s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:33:13+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000399s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_user` [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` LIMIT 1 [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT * FROM `s_user` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000203s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:33:19+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000377s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_user` [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` LIMIT 1 [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT * FROM `s_user` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000087s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:33:21+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/admin/saveinfo/id/1.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000489s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_admin` [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `s_admin` WHERE  `id` = 1 ORDER BY `id` DESC LIMIT 0,1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000143s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_role` WHERE  `is_enable` = 1 [ RunTime:0.000158s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:34:20+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/admin/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000395s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_admin` [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_admin` LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `s_admin` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.000134s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_role` WHERE  `is_enable` = 1 [ RunTime:0.000051s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:35:01+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/admin/saveinfo/id/3.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000519s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_admin` [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `s_admin` WHERE  `id` = 3 ORDER BY `id` DESC LIMIT 0,1 [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.000070s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_role` WHERE  `is_enable` = 1 [ RunTime:0.000065s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:35:12+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/admin/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000495s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_admin` [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_admin` LIMIT 1 [ RunTime:0.000104s ]
+[ sql ] [ SQL ] SELECT * FROM `s_admin` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000103s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_role` WHERE  `is_enable` = 1 [ RunTime:0.000063s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:35:13+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/power/role.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000382s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT * FROM `s_role` ORDER BY `id` DESC [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`p`.`name` FROM `s_role` `r` INNER JOIN `s_role_power` `rp` ON `rp`.`role_id`=`r`.`id` INNER JOIN `s_power` `p` ON `rp`.`power_id`=`p`.`id` WHERE  `r`.`id` = '13' [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_power` [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT * FROM `s_power` [ RunTime:0.000414s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:35:14+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/power/rolesaveinfo.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000395s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_power` [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 0 ORDER BY `sort` [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 41 ORDER BY `sort` [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 81 ORDER BY `sort` [ RunTime:0.000176s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 1 ORDER BY `sort` [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 126 ORDER BY `sort` [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 38 ORDER BY `sort` [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 177 ORDER BY `sort` [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 213 ORDER BY `sort` [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 222 ORDER BY `sort` [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 252 ORDER BY `sort` [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 319 ORDER BY `sort` [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 312 ORDER BY `sort` [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 332 ORDER BY `sort` [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 204 ORDER BY `sort` [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 182 ORDER BY `sort` [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 340 ORDER BY `sort` [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`is_show` FROM `s_power` WHERE  `pid` = 118 ORDER BY `sort` [ RunTime:0.000165s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:35:22+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/power/role.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000431s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `s_role` ORDER BY `id` DESC [ RunTime:0.000110s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`p`.`name` FROM `s_role` `r` INNER JOIN `s_role_power` `rp` ON `rp`.`role_id`=`r`.`id` INNER JOIN `s_power` `p` ON `rp`.`power_id`=`p`.`id` WHERE  `r`.`id` = '13' [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_power` [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `s_power` [ RunTime:0.000268s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:43:47+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/admin/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000525s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_admin` [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_admin` LIMIT 1 [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT * FROM `s_admin` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000083s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000052s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_role` WHERE  `is_enable` = 1 [ RunTime:0.000052s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:13+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/site/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000403s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000155s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:14+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/agreement/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000368s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000149s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:15+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/email/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000397s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000157s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:16+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/sms/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000427s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000167s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:17+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/email/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000399s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000147s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:17+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/seo/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000679s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000175s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:18+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/agreement/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000437s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000403s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:21+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/power/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000509s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_power` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `s_power` WHERE  `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 41 ORDER BY `sort` ASC [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 81 ORDER BY `sort` ASC [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 1 ORDER BY `sort` ASC [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 126 ORDER BY `sort` ASC [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 38 ORDER BY `sort` ASC [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 177 ORDER BY `sort` ASC [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 213 ORDER BY `sort` ASC [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 222 ORDER BY `sort` ASC [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 252 ORDER BY `sort` ASC [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 319 ORDER BY `sort` ASC [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 312 ORDER BY `sort` ASC [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 332 ORDER BY `sort` ASC [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 204 ORDER BY `sort` ASC [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 182 ORDER BY `sort` ASC [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 340 ORDER BY `sort` ASC [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 118 ORDER BY `sort` ASC [ RunTime:0.000265s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:25+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/power/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000477s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_power` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `s_power` WHERE  `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.000134s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 41 ORDER BY `sort` ASC [ RunTime:0.000078s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 81 ORDER BY `sort` ASC [ RunTime:0.000140s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 1 ORDER BY `sort` ASC [ RunTime:0.000137s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 126 ORDER BY `sort` ASC [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 38 ORDER BY `sort` ASC [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 177 ORDER BY `sort` ASC [ RunTime:0.000075s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 213 ORDER BY `sort` ASC [ RunTime:0.000070s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 222 ORDER BY `sort` ASC [ RunTime:0.000090s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 252 ORDER BY `sort` ASC [ RunTime:0.000075s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 319 ORDER BY `sort` ASC [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 312 ORDER BY `sort` ASC [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 332 ORDER BY `sort` ASC [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 204 ORDER BY `sort` ASC [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 182 ORDER BY `sort` ASC [ RunTime:0.000069s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 340 ORDER BY `sort` ASC [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`control`,`action`,`sort`,`is_show`,`icon` FROM `s_power` WHERE  `pid` = 118 ORDER BY `sort` ASC [ RunTime:0.000135s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:56+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/power/role.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000376s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `s_role` ORDER BY `id` DESC [ RunTime:0.000079s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`p`.`name` FROM `s_role` `r` INNER JOIN `s_role_power` `rp` ON `rp`.`role_id`=`r`.`id` INNER JOIN `s_power` `p` ON `rp`.`power_id`=`p`.`id` WHERE  `r`.`id` = '13' [ RunTime:0.000108s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_power` [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `s_power` [ RunTime:0.000224s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:45:59+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/admin/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000514s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_admin` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_admin` LIMIT 1 [ RunTime:0.000103s ]
+[ sql ] [ SQL ] SELECT * FROM `s_admin` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000108s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_role` [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000121s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_role` WHERE  `is_enable` = 1 [ RunTime:0.000098s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:00+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/config/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000412s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000177s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:03+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/config/store.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000474s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000181s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:04+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/config/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000549s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000214s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:11+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/navigation/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000495s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`sort`,`is_show`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000136s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`sort`,`is_show`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `pid` = 8 ORDER BY `sort` [ RunTime:0.000101s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`sort`,`is_show`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `pid` = 54 ORDER BY `sort` [ RunTime:0.000091s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`sort`,`is_show`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `pid` = 17 ORDER BY `sort` [ RunTime:0.000081s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_navigation` WHERE  `is_show` = 1  AND `pid` = 0  AND `nav_type` = 'header' [ RunTime:0.000079s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000080s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 10  AND `is_enable` = 1 [ RunTime:0.000084s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000073s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000082s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000071s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000074s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000355s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_custom_view` [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `s_custom_view` WHERE  `is_enable` = 1 [ RunTime:0.000094s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:16+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/customview/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000487s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_custom_view` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_custom_view` LIMIT 1 [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT * FROM `s_custom_view` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000131s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:17+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/link/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000535s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` ORDER BY `sort` ASC [ RunTime:0.000104s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:18+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/slide/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000526s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_slide` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_slide` LIMIT 1 [ RunTime:0.000134s ]
+[ sql ] [ SQL ] SELECT * FROM `s_slide` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000193s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:20+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/payment/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000383s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_payment` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'CashPayment' ORDER BY `sort` ASC [ RunTime:0.000105s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'Weixin' ORDER BY `sort` ASC [ RunTime:0.000106s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'MafubaoWeixin' ORDER BY `sort` ASC [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'Alipay' ORDER BY `sort` ASC [ RunTime:0.000082s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'AlipayMini' ORDER BY `sort` ASC [ RunTime:0.000090s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'MafubaoAlipay' ORDER BY `sort` ASC [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT `id`,`logo`,`name`,`sort`,`payment`,`config`,`apply_terminal`,`element`,`is_enable`,`is_open_user` FROM `s_payment` WHERE  `payment` = 'DeliveryPayment' ORDER BY `sort` ASC [ RunTime:0.000103s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:24+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/appconfig/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000495s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_config` [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT `only_tag`,`name`,`describe`,`value`,`error_tips` FROM `s_config` [ RunTime:0.000202s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:25+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/apphomenav/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000423s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_app_home_nav` LIMIT 1 [ RunTime:0.000103s ]
+[ sql ] [ SQL ] SELECT * FROM `s_app_home_nav` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000115s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:35+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/index/init.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SELECT VERSION() AS `ver` [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_user` [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` LIMIT 1 [ RunTime:0.000084s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` WHERE  `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000104s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` WHERE  `add_time` >= 1565107200  AND `add_time` <= 1565142395 LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_order` [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4 LIMIT 1 [ RunTime:0.000093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565142395 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4 LIMIT 1 [ RunTime:0.000059s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565142395 LIMIT 1 [ RunTime:0.000131s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4 LIMIT 1 [ RunTime:0.000053s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565142395 LIMIT 1 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000059s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000056s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000059s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000052s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000130s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000112s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000097s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000082s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000071s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000126s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000086s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000088s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000083s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000106s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000075s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000057s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000056s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000056s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000054s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000058s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000053s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000056s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000101s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000102s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000063s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000054s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000127s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000091s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000084s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000064s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_pay_log` [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT `payment_name` FROM `s_pay_log` WHERE  `business_type` = 1 GROUP BY `payment_name` [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1564502400  AND `add_time` <= 1565142395 [ RunTime:0.000203s ]
+---------------------------------------------------------------
+[ 2019-08-07T09:46:39+08:00 ] 61.144.175.135 GET s.justwaityou1314.com/admin.php?s=/index/init.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000713s ] mysql:host=127.0.0.1;port=3306;dbname=shopxo;charset=utf8
+[ sql ] [ SQL ] SELECT VERSION() AS `ver` [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_user` [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` LIMIT 1 [ RunTime:0.000117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` WHERE  `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000173s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_user` WHERE  `add_time` >= 1565107200  AND `add_time` <= 1565142399 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_order` [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4 LIMIT 1 [ RunTime:0.000125s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000089s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565142399 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4 LIMIT 1 [ RunTime:0.000113s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565142399 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4 LIMIT 1 [ RunTime:0.000133s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT SUM(`total_price`) AS tp_sum FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565142399 LIMIT 1 [ RunTime:0.000177s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000081s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000064s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000071s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000069s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1565107200  AND `add_time` <= 1565193599 LIMIT 1 [ RunTime:0.000107s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000080s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000064s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1565020800  AND `add_time` <= 1565107199 LIMIT 1 [ RunTime:0.000125s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000144s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564934400  AND `add_time` <= 1565020799 LIMIT 1 [ RunTime:0.000073s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000058s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000068s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000091s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000104s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564848000  AND `add_time` <= 1564934399 LIMIT 1 [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000070s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000050s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564761600  AND `add_time` <= 1564847999 LIMIT 1 [ RunTime:0.000053s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000053s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000078s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000119s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000073s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000063s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000094s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564675200  AND `add_time` <= 1564761599 LIMIT 1 [ RunTime:0.000074s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 0  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000062s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 1  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000065s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 2  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000059s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 3  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 4  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 5  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000061s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_order` WHERE  `status` = 6  AND `add_time` >= 1564588800  AND `add_time` <= 1564675199 LIMIT 1 [ RunTime:0.000052s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_pay_log` [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT `payment_name` FROM `s_pay_log` WHERE  `business_type` = 1 GROUP BY `payment_name` [ RunTime:0.000072s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_order` WHERE  `status` <= 4  AND `add_time` >= 1564502400  AND `add_time` <= 1565142399 [ RunTime:0.000167s ]

@@ -1,0 +1,101 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <!-- form start -->
+
+        <!-- form end -->
+
+
+        <!-- operation start -->
+        <div class="am-g m-t-15">
+           {{if condition="session('admin')['role_id'] neq 14 || $data eq null"}}
+            <a href="{{:MyUrl('admin/supplierstore/saveinfo')}}" class="am-btn am-btn-secondary am-radius am-btn-xs am-icon-plus"> 新增</a>
+            {{/if}}
+
+        </div>
+        <!-- operation end -->
+
+        <!-- list start -->
+        <table class="am-table am-table-striped am-table-hover am-text-middle m-t-10">
+            <thead>
+            <tr>
+                <td><input type="checkbox" id="all" onclick="swapCheck()"></td>
+                <th>所属供应商</th>
+                <th>店铺名</th>
+                <th>地址</th>
+                <th>状态</th>
+                <th class="am-hide-sm-only">添加时间</th>
+                {{if condition="session('admin')['role_id'] neq 14"}}
+                <th>审核</th>
+                {{/if}}
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{if !empty($data)}}
+            {{foreach $data as $v}}
+            <tr id="data-list-{{$v.id}}">
+                <td><input type="checkbox" name="check" value="{{$v.id}}"></td>
+                <td>{{$v.store_id}}</td>
+                <td>{{$v.name}}</td>
+                <td>{{$v.adds}}</td>
+                <td class="am-hide-sm-only">{{if $v.status eq 0}}待审核{{else/}}审核通过{{/if}}</td>
+                <td class="am-hide-sm-only">{{:date('Y-m-d H:i:s', $v['createtime'])}}</td>
+                {{if condition="session('admin')['role_id'] neq 14"}}
+                <td>
+                    <a href="javascript:;" class="am-icon-btn am-icon-check submit-state {{if $v['status'] eq 1}}am-success{{else /}}am-default{{/if}}" data-url="{{:MyUrl('admin/supplierstore/Status')}}" data-id="{{$v.id}}" data-state="{{$v['status']}}"  data-is-update-status="1"></a>
+                </td>
+                {{/if}}
+                <td>
+
+                    <a href="{{:MyUrl('admin/supplierstore/saveinfo', array('id'=>$v['id']))}}">
+                        <button class="am-btn am-btn-secondary am-btn-xs am-radius am-icon-edit" > 编辑</button>
+                    </a>
+
+                    {{if condition="session('admin')['role_id'] neq 14"}}
+                    <button class="am-btn am-btn-danger am-btn-xs am-radius am-icon-trash-o submit-delete" data-url="{{:MyUrl('admin/supplierstore/delete')}}" data-id="{{$v.id}}"> 删除</button>
+                    {{/if}}
+
+                </td>
+            </tr>
+            {{/foreach}}
+            {{/if}}
+            </tbody>
+        </table>
+        {{if empty($data)}}
+        <div class="table-no"><i class="am-icon-warning"></i> 没有相关数据</div>
+        {{/if}}
+        <!-- list end -->
+
+        <!-- page start -->
+        {{if !empty($data)}}
+
+        {{/if}}
+        <!-- page end -->
+    </div>
+</div>
+<!-- right content end  -->
+
+{{include file="public/footer" /}}
+<script>
+    var isCheckAll = false;
+
+    function swapCheck() {
+        if (isCheckAll) {
+            $("input[type='checkbox']").each(function() {
+                this.checked = false;
+            });
+            isCheckAll = false;
+        } else {
+            $("input[type='checkbox']").each(function() {
+                this.checked = true;
+            });
+            isCheckAll = true;
+        }
+    }
+
+
+
+</script>

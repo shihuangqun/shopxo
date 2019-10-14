@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cb602b86-daf2-4289-a180-9a059539228e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/admin/controller/Member.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/admin/controller/Staff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/admin/view/default/member/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/admin/view/default/member/save_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/admin/view/default/staff/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/admin/view/default/staff/save_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/api/controller/Staff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Supplierstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Supplierstore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/supplier/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/supplier/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/user/browse.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/user/browse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/default/user/save_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/default/user/save_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/Goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Goods.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/GoodsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/GoodsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/SearchService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/SearchService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/service/UserService.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1QtoiN74kYfFxxSaha7qY2NuaZy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="common_user_status_list" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb602b86-daf2-4289-a180-9a059539228e" name="Default Changelist" comment="" />
+      <created>1568599379192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568599379192</updated>
+      <workItem from="1568599380397" duration="17543000" />
+      <workItem from="1568687845131" duration="700000" />
+      <workItem from="1568773887280" duration="4960000" />
+      <workItem from="1568856419477" duration="2978000" />
+      <workItem from="1568944528561" duration="3357000" />
+      <workItem from="1568947949391" duration="1046000" />
+      <workItem from="1569227327193" duration="1718000" />
+      <workItem from="1569287740813" duration="1226000" />
+      <workItem from="1569832329016" duration="5195000" />
+      <workItem from="1570496580818" duration="11740000" />
+      <workItem from="1570525727420" duration="13000" />
+      <workItem from="1570583341850" duration="7167000" />
+      <workItem from="1570602767130" duration="5279000" />
+      <workItem from="1570669733167" duration="12741000" />
+      <workItem from="1570756273085" duration="3754000" />
+      <workItem from="1570763337158" duration="9339000" />
+      <workItem from="1570848686074" duration="3837000" />
+      <workItem from="1571017517198" duration="659000" />
+      <workItem from="1571019362982" duration="2000" />
+      <workItem from="1571019377914" duration="2000" />
+      <workItem from="1571019392802" duration="1199000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
